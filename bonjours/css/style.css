@@ -1,0 +1,364 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,200;0,8..144,400;1,8..144,500&display=swap');    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-family: 'Roboto Serif', serif; 
+ }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(251, 253, 255);
+}
+
+.grid_cen{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.flex_cen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 90%;
+    height: 100vh;
+ }
+
+nav{
+    width: 100%;
+    height: 70px;
+     grid-template-columns: 1fr 3fr;
+    color: #000c82;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+
+}
+nav:hover{
+    padding: 6px;
+}
+nav:hover .logo{
+    z-index: 5;
+    color: white;
+    font-weight: 800;
+}
+.drop{
+    position: absolute;
+    width: 100%;
+    background: rgba(202, 202, 202, 0.38);
+    top: 0;
+    left: 0;
+    height: 0%;
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.slide{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    background: #222;
+    height: 100%;
+    transition-delay: 1s;
+}
+nav:hover .slide{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+
+}
+.nav_item{
+    padding: 15px;
+
+}
+nav:hover .drop{
+    position: absolute;
+    width: 100%;
+     top: 0;
+    left: 0;
+    height: 100%;
+
+}
+.nav_item:hover{
+    border-top: 1px solid white;
+   
+
+}
+
+.logo{
+    justify-content: left;
+}
+.main_nav{
+    grid-template-columns: 1fr 1fr ;
+     height: 80%;
+    color: #000c82;
+    font-weight: 400;
+    transition: 2s ease;
+
+
+
+}
+nav:hover .wbg{
+    background: white;
+    color: #000c82;
+}
+nav:hover .main_nav{
+    z-index: 5;
+    transition: 2s ease;
+     transition-delay: 2s;
+    color: white;
+    font-weight: 700;
+
+ }
+.left{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.right{
+    grid-template-columns: 3fr 1fr 1fr;
+}
+
+.content{
+    width: 100%;
+    height: calc(100vh - 70px);
+     overflow: hidden;
+    overflow-y: auto;
+    background: rgb(251, 253, 255);
+
+
+    
+}
+
+.banner{
+    width: 100%;
+     display: grid;
+    grid-template-columns: 1fr 1fr;
+     height: 90%;
+}
+.b_left{
+    padding-right: 40px;
+}
+.b_left h6{
+    margin: 30px 0 20px 0;
+}
+.b_left h3{
+    font-size: 47px;
+    line-height: 70px;
+    font-weight: 100;
+  margin-bottom: 20px;
+  color: #000c82;
+}
+.b_left span{
+    font-size: 14px;
+    font-weight: 300;
+  
+}
+
+.b_btns{
+    margin-top: 20px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+ }
+.b_btn{
+    height: 40px;
+     width: 70%;
+ }
+.t_button{
+  
+}
+ .circle{
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+   border-radius: 50%; 
+   color:#000c82;
+   box-shadow: 0 0 10px 1px rgba(157, 151, 151, 0.793);
+}
+ 
+.b_image{
+    width: 75%;
+     height: 80%;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    margin-left: 10%;
+    overflow: hidden;
+    
+}
+.b_image img{
+    width: 100%;
+    height: 100%;
+
+}
+.scope{
+    width: 100%;
+    height: 10%;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.scope span{
+    font-family: 'Rubik Vinyl', cursive;
+
+
+}
+
+.banner_two{
+    width: 100%;
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    position: relative;
+}
+.div{
+ }
+
+.b_t_image{
+    width: 330px;
+    height: 70%;
+     border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    box-shadow:  0 0 5px 1px rgb(165, 166, 170);
+}
+.b_t_image .blur{
+    height: 30%;
+}
+.b_t_image img{
+    width: 140%;
+ 
+}
+.started{
+    position: absolute;
+    margin: 30px;
+    margin-left: 6%;
+    font-size: 20px;
+    color: #000c82;
+    font-weight: 600;
+}
+.back{
+    position: absolute;
+      height: 63%;
+    width: 110px;
+    right: 70px;
+    top: 150px;
+    background: #000c82;
+}
+.div2{
+    justify-content: space-evenly;
+}
+.rel{
+    position: relative;
+}
+
+.card{
+    height: 300px;
+    width: 250px;
+     display: grid;
+    grid-template-rows: 4fr 1fr 4fr;
+    position: relative;
+    color: #000c82;
+    padding: 15px;
+    box-shadow: 0 0 25px 1px rgba(128, 128, 128, 0.441);
+}
+.c_icon{
+    justify-content: left;
+    padding-left: 20px;
+    font-size: 30px;
+}
+.c_title{
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.c_text{
+    color: grey;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.number{
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+     background: #ddf4ff;
+     color: #8ccbe6;
+     box-shadow: inset 4px 4px 5px 1px #a7d9ee;
+}
+.banner_three{
+    width: 100%;
+    height: 300px;
+     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.class{
+    height: 200px;
+    width: 200px;
+     position: relative;
+    color: white;
+    overflow: hidden;
+  
+}
+.class img{
+    width: 100%;
+ }
+.blur{
+    width: 100%;
+    height: 70px;
+    background-blend-mode: overlay;
+    background: url('../images/online-tutoring-male-african-teacher-headset-having-web-lesson-laptop-online-tutoring-male-african-teacher-headset-207946628.jpg'), linear-gradient(46deg, rgb(103, 93, 93), grey);
+    background-position: center;
+    transform: rotate(180deg);
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    filter: blur(9px);
+    border: 4px solid black;
+ 
+}
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: #444;
+    color: white;
+}
+.wbg{
+    padding: 12px;
+    background: #000c82;
+    color: white;
+    border-radius: 5px;
+}
+.info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+     padding: 5px;
+    font-size: 12px;
+
+}
+.info h6{
+    margin-right: 20px;
+    background: rgba(156, 156, 156, 0.111);
+    height: max-content;
+    padding: 6px;
+}
